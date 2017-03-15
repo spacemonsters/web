@@ -8,5 +8,5 @@
 //võtame konfiguratsiooni kasutusele
 require_once "conf.php";
 //pealehe sisu
-echo "Hello fleshy mammals"
+echo "<h1>Hello fleshy mammals</h1>"
 ?>
