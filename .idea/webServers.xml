@@ -3,7 +3,7 @@
   <component name="WebServers">
     <option name="servers">
       <webServer id="73b4777e-967a-47ff-9fd6-b94eb15134d8" name="web" url="http://138.68.68.130/~martti.merilain/">
-        <fileTransfer host="138.68.68.130" port="22" rootFolder="/home/martti.merilain/public/web/" accessType="SFTP">
+        <fileTransfer host="138.68.68.130" port="22" rootFolder="/home/martti.merilain/public/" accessType="SFTP">
           <advancedOptions>
             <advancedOptions dataProtectionLevel="Private" />
           </advancedOptions>
