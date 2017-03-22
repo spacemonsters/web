@@ -34,6 +34,7 @@ class template
             $this->readFile($f);
         }
 
+
         if($this->content === false){
             echo "Ei suutnud lugeda fili".$this->file."<br />";
         }
