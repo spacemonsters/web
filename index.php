@@ -11,6 +11,11 @@ require_once "conf.php";
 echo "<h1>Hello fleshy mammals</h1>";
 //valmistame pea malli/template
 $main_tmpl = new template(TMPL_DIR."template.html");
+$main_tmpl->set("user","Kasutajanimi");
+$main_tmpl->set("title","Pealeht");
+$main_tmpl->set("lang_bar","Keeleriba");
+$main_tmpl->set("menu","Lehe peamenüü");
+$main_tmpl->set("content","Lehe sisu");
 //koostatud objekti kontrollimine
 echo "<pre>";
 print_r($main_tmpl);

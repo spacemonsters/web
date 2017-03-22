@@ -50,4 +50,3 @@ class template
     }
 
 }//klassi lõpp
-?>
