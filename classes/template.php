@@ -15,6 +15,6 @@ class template
     //loome sisu html malli failist
     function readFile($f){
         $this->content = file_get_contents($f);
-    }//readFile
+    }//readFile lõpp
 }//klassi lõpp
 ?>
