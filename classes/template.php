@@ -28,6 +28,12 @@ class template
             //loome mallist faili sisu
             $this->readFile($f);
         }
+        $f = TMPL_DIR.$this->file;
+        if(file_exists($f) and is_file($f) and is_readable($f)){
+            //loome mallist faili sisu
+            $this->readFile($f);
+        }
+
         if($this->content === false){
             echo "Ei suutnud lugeda fili".$this->file."<br />";
         }
