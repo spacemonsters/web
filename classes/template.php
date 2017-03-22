@@ -12,6 +12,11 @@ class template
     var $file = ""; //html malli faili nimi
     var $content = false; //html faili sisu
     var $vars = array(); //html vaate sisu - reaalsed väärtused
+
+    function construct($f){
+        $this->file=$f;
+        $this->loadFile();
+    }
     //malli lugemis funktsioon
     function loadFile(){
         $f=$this->file; //lokaalne asendus
