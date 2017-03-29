@@ -16,8 +16,8 @@ $main_tmpl->set("title","Pealeht");
 $main_tmpl->set("lang_bar","Keeleriba");
 $main_tmpl->set("menu","Lehe peamenüü");
 $main_tmpl->set("content","Lehe sisu");
+echo $main_tmpl->parse();
 //koostatud objekti kontrollimine
-echo "<pre>";
+//echo "<pre>";
 print_r($main_tmpl);
-echo "</pre>";
-?>
+//echo "</pre>";
