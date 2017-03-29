@@ -5,19 +5,17 @@
  * Date: 15.03.2017
  * Time: 14:15
  */
-//võtame konfiguratsiooni kasutusele
-require_once "conf.php";
-//pealehe sisu
-echo "<h1>Hello fleshy mammals</h1>";
-//valmistame pea malli/template
-$main_tmpl = new template(TMPL_DIR."template.html");
-$main_tmpl->set("user","Kasutajanimi");
-$main_tmpl->set("title","Pealeht");
-$main_tmpl->set("lang_bar","Keeleriba");
-$main_tmpl->set("menu","Lehe peamenüü");
-$main_tmpl->set("content","Lehe sisu");
-echo $main_tmpl->parse();
-//koostatud objekti kontrollimine
-//echo "<pre>";
+require_once 'conf.php';
+echo '<h1>Programmeerimise esileht</h1>';
+$main_tmpl = new template('main.html');
+//echo '<pre>';
 print_r($main_tmpl);
-//echo "</pre>";
+$main_tmpl->set('user', 'Kasutajanimi');
+$main_tmpl->set('title', 'Pealeht');
+$main_tmpl->set('lang_bar', 'Keeleriba');
+$main_tmpl->set('menu','Peamenüü' );
+$main_tmpl->set('content', 'lehe sisu');
+$main_tmpl->set('site_title', 'Veebiprogemise kursus');
+echo $main_tmpl->parse();
+//echo '</pre>';
+?>
