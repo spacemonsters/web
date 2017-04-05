@@ -12,7 +12,6 @@ define('TMPL_DIR', 'tmpl/'); //clasess kataloogi konstant
 require_once LIB_DIR.'utils.php';
 require_once CLASSES_DIR.'template.php';
 require_once CLASSES_DIR.'http.php';
-require_once CLASSES_DIR.'linkobject.php';
+require_once CLASSES_DIR.'linkobjects.php';
 $http = new linkobject();
 echo $http->getlink(array('kasutaja'=>'nimi','pass'=>'parool'));
-?>
