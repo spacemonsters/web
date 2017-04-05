@@ -62,4 +62,3 @@ class template
         return $str;
     }// parse
 }
-?>

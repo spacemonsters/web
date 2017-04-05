@@ -18,4 +18,3 @@ $main_tmpl->set('site_title', 'Veebi');
 //kontrollime objekti sisu
 echo $main_tmpl->parse();
 //require_once 'menu.php';
-?>
