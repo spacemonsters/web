@@ -15,3 +15,4 @@ require_once CLASSES_DIR.'http.php';
 require_once CLASSES_DIR.'linkobjects.php';
 $http = new linkobject();
 echo $http->getlink(array('kasutaja'=>'nimi','pass'=>'parool'));
+$db=new mysql("localhost","user","parool","db");
