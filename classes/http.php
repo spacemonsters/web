@@ -18,7 +18,7 @@ class http{
         $this->server = $_SERVER;
     }
     function initCont(){
-        $consts = array('REMOTE_ADDR', 'HTTP_POST', 'PHP_SELF', 'SCRIPT_NAME');
+        $consts = array('REMOTE_ADDR', 'HTTP_HOST', 'PHP_SELF', 'SCRIPT_NAME');
         foreach ($consts as $const){
             if(!defined($const) and isset($this->server[$const])){
                 define($const, $this->server[$const]);
