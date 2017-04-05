@@ -18,6 +18,7 @@ require_once "db_conf.php";
 $http = new linkobject();
 echo $http->getlink(array('kasutaja'=>'nimi','pass'=>'parool'));
 $db=new mysql(DB_HOST,DB_USER,DB_PASS,DB_NAME);
+$res=$db->query("NOW()")
 echo "<pre>";
-print_r($db);
+print_r($res);
 echo "</pre>";
