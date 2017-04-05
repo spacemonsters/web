@@ -15,7 +15,7 @@ class linkobject extends http
     function __construct()
     {
         parent::__construct(); //http konstruktor tuleb tööle
-        $this->baseurl = $this->protocol.HTTP_HOST.SCRIPT_NAME;
+        $this->baseUrl = $this->protocol.HTTP_HOST.SCRIPT_NAME;
     }
     //andmete paari lisamine kujul: asi=väärtus&asi=väärtus
     function addtolink(&$link, $nimi, $val){
