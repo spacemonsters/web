@@ -7,33 +7,39 @@
  * Time: 22:21
  */
 class linkobject extends http
-{
-    var $baseurl = false;
-    var $delimiter = '&amp;';
+{// klassi algus
+    // klassi muutujad - omadused
+    var $baseUrl = false;
+    var $delim = '&amp;';
     var $eq = '=';
     var $protocol = 'http://';
+    // klassi meetodid
+    // klassi konstruktor
     function __construct(){
-        parent::__construct(); //http konstruktor tuleb tööle
+        parent::__construct(); // kutsume tööle http konstruktor
+        // loome põhilink
         $this->baseUrl = $this->protocol.HTTP_HOST.SCRIPT_NAME;
-    }
-    //andmete paari lisamine kujul: asi=väärtus&asi=väärtus
-    function addtolink(&$link, $nimi, $val){
+    }// konstruktor
+
+    // andmete paari koostamine kujul
+    // nimi=väärtus&nimi1=väärtus1 jne
+    function addToLink(&$link, $name, $val){
         if($link != ''){
-            $link = $link.$this->delimiter;
+            $link = $link.$this->delim;
         }
-        $link = $link.fixurl($nimi).$this->eq.fixurl($val);
-    }
-    function getlink($add = array()){
+        $link = $link.fixUrl($name).$this->eq.fixUrl($val);
+    }// addToLink
+    // saame täislink valmis
+    function getLink($add = array()){
         $link = '';
-        foreach($add as $nimi=>$val){
-            $this->addtolink($link, $nimi, $val);
+        foreach($add as $name=>$val){
+            $this->addToLink($link, $name, $val);
         }
-        if ($link!=''){
-            $link=$this->baseurl.'?'.$link;
-        }
-        else{
-            $link=$this->baseurl;
+        if($link != ''){
+            $link = $this->baseUrl.'?'.$link;
+        } else {
+            $link = $this->baseUrl;
         }
         return $link;
-    }
-}
+    }// getLink
+}// klassi lõpp
