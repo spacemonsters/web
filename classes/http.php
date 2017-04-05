@@ -6,7 +6,8 @@
  * Date: 4.04.2017
  * Time: 22:17
  */
-class http{
+class http
+{
     var $vars = array();
     var $server = array();
     function __construct(){
