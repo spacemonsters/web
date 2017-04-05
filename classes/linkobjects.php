@@ -12,8 +12,7 @@ class linkobject extends http
     var $delimiter = '&amp;';
     var $eq = '=';
     var $protocol = 'http://';
-    function __construct()
-    {
+    function __construct(){
         parent::__construct(); //http konstruktor tuleb tööle
         $this->baseUrl = $this->protocol.HTTP_HOST.SCRIPT_NAME;
     }
