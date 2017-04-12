@@ -9,8 +9,8 @@
 $menu = new template('menu.menu');
 $item = new template('menu.item');
 // lisame sisu
-$sql="select content_id,title from content where".
-    "parent_id=".fixDb(0)."and show in_menu".fixDb(1);
+$sql='select content_id,title from content where'.
+    'parent_id='.fixDb(0).'and show in_menu'.fixDb(1);
 // nimetame menüüs väljastav element
 $item->set('name', 'esimene');
 // loome antud menüü elemendile lingi
@@ -27,4 +27,3 @@ $menu->add('items', $item->parse());
 // kontrollime objekti olemasolu ja sisu
 // kui soovime pidevat asendamist, siis set funktsioon add asemel
 $main_tmpl->add('menu', $menu->parse());
-?>
