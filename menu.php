@@ -9,6 +9,8 @@
 $menu = new template('menu.menu');
 $item = new template('menu.item');
 // lisame sisu
+$sql="select content_id,title from content where".
+    "parent_id=" ;
 // nimetame menüüs väljastav element
 $item->set('name', 'esimene');
 // loome antud menüü elemendile lingi
