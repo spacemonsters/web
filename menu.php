@@ -12,17 +12,18 @@ $item = new template('menu.item');
 $sql='select content_id,title from content where'.
     'parent_id='.fixDb(0).'and show in_menu'.fixDb(1);
 $res=$db->getArray($sql);
-echo "<pre>";
-print_r($res);
-echo "</pre>";
+if($res != false){
+    foreach ($res as $page){
+        $item->set("name", $page["title"]);
+        $link=$http->getLink(array("page_id"=>$page["content_id"]));
+        $item->set("link", $link);
+        $item->add("items", $item->parse());
+    }
+}
 // nimetame menüüs väljastav element
-$item->set('name', 'esimene');
 // loome antud menüü elemendile lingi
-$link = $http->getLink(array('act'=>'first'));
 // lisame antud link menüüsse
-$item->set('link', $link);
 // lisame valmis link menüü objekti sisse
-$menu->set('items', $item->parse());
 //
 $item->set('name', 'teine');
 $link = $http->getLink(array('act'=>'second'));
