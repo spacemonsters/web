@@ -10,7 +10,7 @@ $menu = new template('menu.menu');
 $item = new template('menu.item');
 // lisame sisu
 $sql="select content_id,title from content where".
-    "parent_id=" ;
+    "parent_id=".fixDb(0)."and show in_menu".fixDb(1);
 // nimetame menüüs väljastav element
 $item->set('name', 'esimene');
 // loome antud menüü elemendile lingi
