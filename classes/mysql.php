@@ -39,4 +39,15 @@ class mysql
         }
         return $res;
     }//query
+function getArray($sql){
+        $res=$this->query($sql);
+        $data=array();
+        while ($row=mysqli_fetch_assoc($res)){
+            $data()=$row;
+        }
+    if(count($data) == 0){
+        return false;
+    }
+    return $data;
+}
 } // klassi lõpp
