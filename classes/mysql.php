@@ -43,7 +43,7 @@ function getArray($sql){
         $res=$this->query($sql);
         $data=array();
         while ($row=mysqli_fetch_assoc($res)){
-            $data()=$row;
+            $data[]=$row;
         }
     if(count($data) == 0){
         return false;
