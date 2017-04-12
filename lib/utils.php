@@ -8,6 +8,6 @@
 function fixUrl($val){
     return urlencode($val);
 }
-fixDb($val){
+function fixDb($val){
     return'"'.addslashes($val).'"'
 }
