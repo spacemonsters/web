@@ -46,5 +46,23 @@ class http
     function set($name, $val){
         $this->vars[$name] = $val;
     }// set
+    // eemaldame ebavajalikud andmed veebist
+    function del($name){
+        if(isset($this->vars[$name])){
+            unset($this->vars[$name]);
+        }
+    }// del
+    // suunamine
+    function redirect($url = false){
+        global $sess;
+        $sess->flush();
+        // kui $url on false - pealehele
+        if($url == false){
+            $url = $this->getLink();
+        }
+        $url = str_replace('&amp;', '&', $url);
+        header('Location: '.$url);
+        exit;
+    }// redirect
 }// klassi lõpp
 ?>
