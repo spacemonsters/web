@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: erikp
- * Date: 05.04.2017
- * Time: 9:03
- */
 $act = $http->get('act'); // küsime hetkel valitud tegevus
 // koostame otsitava faili nimi - failisüsteemi jaoks
 $fn = ACTS_DIR.str_replace('.', '/', $act).'.php';
