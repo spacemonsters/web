@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: erik
- * Date: 4/19/17
- * Time: 8:50 AM
- */
 $sep = new template('lang.sep');
 $sep = $sep->parse();
 $count = 0;
