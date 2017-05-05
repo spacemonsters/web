@@ -1,12 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: erkz
- * Date: 4.05.17
- * Time: 14:27
- */
-
-
 // võtame kätte vormi poolt edastatud andmed
 $username = $http->get('kasutaja');
 $passwd = $http->get('parool');
