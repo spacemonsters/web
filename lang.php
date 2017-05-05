@@ -6,7 +6,7 @@
  * Time: 9:15
  */
 // loome keele elementide eraldaja
-$sep = new template('tmpl.lang.sep');
+$sep = new template('lang.sep');
 $sep = $sep->parse();
 $count = 0;
 // väljastame kõik olemasolevad keeled
