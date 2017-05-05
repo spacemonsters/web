@@ -21,9 +21,7 @@ class linkobject extends http
         // loome põhilink
         $this->baseUrl = $this->protocol.HTTP_HOST.SCRIPT_NAME;
     }// konstruktor
-
-    // andmete paari koostamine kujul
-    // nimi=väärtus&nimi1=väärtus1 jne
+    // andmete paari koostamine kujul nimi=väärtus&nimi1=väärtus1 jne
     function addToLink(&$link, $name, $val){
         if($link != ''){
             $link = $link.$this->delim;
@@ -43,10 +41,10 @@ class linkobject extends http
                 $this->addToLink($link, $name, $val);
             }
         }
-        // juhul, kui antud objektis see väärtus juba määratud - näiteks keele id
+        // juhul, kui antud objektis väärtus juba määratud - näiteks keele id
         foreach ($this->aie as $name){
             $val = $this->get($name);
-            // nüüd tuleb kontrollida, kas olemasolev asi juba lingis lisatud või mitte
+            // nüüd tuleb kontrollida, kas olemasolev asi on lisatud või mitte
             if($val != false and !in_array($name, $not)){
                 $this->addToLink($link, $name, $val);
             }
