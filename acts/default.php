@@ -1,12 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: erikp
- * Date: 05.04.2017
- * Time: 9:18
- */
-
-
 // lehe id saamine ja teisendamine - andmebaasis BIGINT
 $page_id = (int)$http->get('page_id');
 // sql lause lehe sisu otsimiseks vastavalt id-le
