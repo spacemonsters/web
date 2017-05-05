@@ -1,11 +1,4 @@
 <?php
-
-/**
- * Created by PhpStorm.
- * User: erik
- * Date: 4/19/17
- * Time: 8:53 AM
- */
 class session
 {// klassi algus
     // klassi muutujad
