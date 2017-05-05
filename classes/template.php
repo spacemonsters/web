@@ -1,11 +1,4 @@
 <?php
-
-/**
- * Created by PhpStorm.
- * User: erikp
- * Date: 22.03.2017
- * Time: 12:11
- */
 class template
 {// klassi algus
     // template klassi omadused - muutujad
