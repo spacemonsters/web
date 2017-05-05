@@ -6,9 +6,9 @@
  * Time: 10:44
  */
 $act = $http->get('act'); // küsime hetkel valitud tegevus
-// koostame otsitava faili nimi - failisüsteemi jaoks
+// koostame otsitava faili nime - see on failisüsteemi jaoks
 $fn = ACTS_DIR.str_replace('.', '/', $act).'.php';
-// kui selline fail olemas ja lugemiseks lubatud
+// kui fail olemas ja lugemiseks lubatud
 if(file_exists($fn) and is_file($fn) and is_readable($fn)){
     // loeme sisu
     require_once $fn;
