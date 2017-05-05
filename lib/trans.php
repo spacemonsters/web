@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: erik
- * Date: 4/19/17
- * Time: 7:44 AM
- */
 function tr($txt){
     static $trans = false;
     if(LANG_ID == DEFAULT_LANG){
