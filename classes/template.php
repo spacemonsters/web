@@ -32,19 +32,19 @@ class template
             $this->readFile($f);
         }
         // lisame TMPL_DIR kasutusele
-        $f = TMPL_DIR.$this->file; // veel üks lokaalne asendus
+        $f = TMPL_DIR.$this->file; // üks lokaalne asendus
         if(file_exists($f) and is_file($f) and is_readable($f)){
             // loeme failist malli sisu
             $this->readFile($f);
         }
         // lisame .html laienduse kasutusele
-        $f = TMPL_DIR.$this->file.'.html'; // veel üks lokaalne asendus
+        $f = TMPL_DIR.$this->file.'.html'; // üks lokaalne asendus
         if(file_exists($f) and is_file($f) and is_readable($f)){
             // loeme failist malli sisu
             $this->readFile($f);
         }
         // lisame alamkataloogid kasutusele
-        $f = TMPL_DIR.str_replace('.', '/', $this->file).'.html'; // veel üks lokaalne asendus
+        $f = TMPL_DIR.str_replace('.', '/', $this->file).'.html'; // üks lokaalne asendus
         if(file_exists($f) and is_file($f) and is_readable($f)){
             // loeme failist malli sisu
             $this->readFile($f);
