@@ -6,4 +6,3 @@
  * Time: 10:41
  */
 $main_tmpl->set('content', 'Teine leht');
-?>
