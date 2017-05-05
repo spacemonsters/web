@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: erkz
- * Date: 4.05.17
- * Time: 14:27
- */
 $login = new template('login');
 $error = $sess->get('error');
 $login->set('error', $error);
