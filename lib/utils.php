@@ -12,3 +12,4 @@ function fixDb($val){
     return '"'.addslashes($val).'"';
 }
 ?>
+
