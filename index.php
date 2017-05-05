@@ -5,12 +5,12 @@
  * Date: 15.03.2017
  * Time: 14:15
  */
-// konfiguratsioon kasutusele
+// võtame konfiguratsiooni kasutusele
 require_once 'conf.php';
 // pealehe sisu
 echo '<h1>Veebiprogrammeerimise esileht</h1>';
 // valmistame peatemplate objekti
-$main_tmpl = new template('tmpl/menu/main.html');
+$main_tmpl = new template('main');
 // valmistame paarid malli_element => väärtus
 $main_tmpl->set('user', $sess->user_data['username']);
 $main_tmpl->set('title', tr('Pealeht'));
