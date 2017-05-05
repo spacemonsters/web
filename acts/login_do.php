@@ -15,15 +15,15 @@ $sql = 'SELECT * FROM user '.
 $res = $db->getArray($sql);
 // teeme päringu tulemuse kontroll
 if($res == false){
-    // loome veateade ja paneme see sessiooni
+    // loome veateade ja paneme selle sessiooni
     $sess->set('error', tr('Probleem sisselogimisega'));
     // siis tuleb suunata kasutaja sisselogimisvormi tagasi
     $link = $http->getLink(array('act' => 'login'));
     $http->redirect($link);
 } else {
-    // sisse tuleb avada kasutajale sessiooni
+    // siis tuleb avada kasutajale sessioon
     $sess->createSession($res[0]);
-    // tuleb suunata kasutajat pealehele
+    // tuleb suunata kasutaja pealehele
     // kus ma väljastan kasutajaandmed sessiooni kontrolliks
     $http->redirect();
 }
