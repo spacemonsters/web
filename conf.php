@@ -1,10 +1,5 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: erikp
- * Date: 15.03.2017
- * Time: 15:25
- */
+
 error_reporting(0);
 // defineerime vajalikud konstandid
 define('CLASSES_DIR', 'classes/'); // classes kataloogi nime konstant
