@@ -8,11 +8,11 @@
 class mysql
 { // klassi algus
     // klassi omadused
-    var $conn = false; // ühendus andmebaasiserveriga
-    var $host = false; // andmebaasi serveri host
-    var $user = false; // andmebaasi serveri kasutaja
-    var $pass = false; // andmebaasi serveri parool
-    var $dbname = false; // andmebaasi serveris andmebaas
+    var $conn = false; // ühendus andmebaasi serveriga
+    var $host = false; // serveri host
+    var $user = false; // serveri kasutaja
+    var $pass = false; // serveri parool
+    var $dbname = false; // serveri andmebaas
     // klassi tegevused
     function __construct($h, $u, $p, $dn){
         $this->host = $h;
@@ -28,26 +28,28 @@ class mysql
             exit;
         }
     }// connect
-    //päringu teostamine
+    // päringu teostamine
     function query($sql){
-        $res=mysqli_query($this->conn, $sql);
-        if($res==false){
-        echo"Viga päringus!<br>";
-        echo"<b>".$sql."</b><br>";
-        echo mysqli_error($this->conn)."<br>";
-        exit;
+        $res = mysqli_query($this->conn, $sql);
+        if($res == false){
+            echo 'Viga päringus!<br />';
+            echo '<b>'.$sql.'</b><br />';
+            echo mysqli_error($this->conn).'<br />';
+            exit;
         }
         return $res;
-    }//query
-function getArray($sql){
-        $res=$this->query($sql);
-        $data=array();
-        while ($row=mysqli_fetch_assoc($res)){
-            $data[]=$row;
+    }// query
+    // andmetega päringu teostamine
+    function getArray($sql){
+        $res = $this->query($sql);
+        $data = array();
+        while($row = mysqli_fetch_assoc($res)){
+            $data[] = $row;
         }
-    if(count($data) == 0){
-        return false;
-    }
-    return $data;
-}
+        if(count($data) == 0){
+            return false;
+        }
+        return $data;
+    }// getArray
 } // klassi lõpp
+?>
