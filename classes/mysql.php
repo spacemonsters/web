@@ -1,11 +1,4 @@
 <?php
-
-/**
- * Created by PhpStorm.
- * User: erikp
- * Date: 05.04.2017
- * Time: 10:28
- */
 class mysql
 { // klassi algus
     // klassi omadused
