@@ -1,11 +1,11 @@
 <?php
 /**
  * Created by PhpStorm.
- * User: anna.karutina
+ * User: erikp
  * Date: 15.03.2017
  * Time: 13:08
  */
-// võtame konfiguratsiooni kasutusele
+// require once võtab vähem ressurssi.
 require_once 'conf.php';
 // pealehe sisu
 echo '<h1>Veebiprogrammeerimise esileht</h1>';
@@ -27,3 +27,4 @@ echo $main_tmpl->parse();
 // uuendame sessiooni andmed
 $sess->flush();
 ?>
+
