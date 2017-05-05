@@ -5,7 +5,6 @@
  * Date: 5.04.2017
  * Time: 10:45
  */
-// loome menüü mallide objektid
 $menu = new template('menu.menu');
 $item = new template('menu.item');
 // lisame sisu
