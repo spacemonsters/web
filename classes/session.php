@@ -114,7 +114,7 @@ class session
             define('ROLE_ID', 0);
             define('USER_ID', 0);
         }
-    }// checkSession
+    }// check Session
     // sessiooni uuendamine
     function flush(){
         if($this->sid !== false){
@@ -148,5 +148,5 @@ class session
             $this->sid = false;
             $this->http->del('sid');
         }
-    }// delSession
+    }// del Session
 }// klassi lõpp
