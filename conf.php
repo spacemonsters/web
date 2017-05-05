@@ -47,6 +47,6 @@ if(!isset($siteLangs[$lang_id])){
     $lang_id = DEFAULT_LANG;
     $http->set('lang_id', $lang_id);
 }
-// määrame mugavuseks aktiivse keele konstandi
+// määrame aktiivse keele konstandi
 define('LANG_ID', $lang_id);
 ?>
