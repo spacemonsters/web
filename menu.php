@@ -24,8 +24,7 @@ if($res != false){
         $item->set('link', $link);
         // lisame valmis link menüü objekti sisse
         $menu->add('items', $item->parse());
-    }
-}
+    }}
 // sisse logimine
 if(USER_ID == ROLE_NONE){
     $item->set('name', tr('Logi sisse'));
