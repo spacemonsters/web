@@ -10,7 +10,7 @@ require_once 'conf.php';
 // pealehe sisu
 echo '<h1>Veebiprogrammeerimise esileht</h1>';
 // valmistame peatemplate objekti
-$main_tmpl = new template('main');
+$main_tmpl = new template('tmpl.menu.main');
 // valmistame paarid malli_element => väärtus
 $main_tmpl->set('user', $sess->user_data['username']);
 $main_tmpl->set('title', tr('Pealeht'));
