@@ -1,8 +1,9 @@
 <?php
 /**
  * Created by PhpStorm.
- * User: Martti
+ * User: anna.karutina
  * Date: 5.04.2017
- * Time: 10:41
+ * Time: 8:44
  */
 $main_tmpl->set('content', 'Esimene leht');
+?>

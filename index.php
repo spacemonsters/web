@@ -1,9 +1,9 @@
 <?php
 /**
  * Created by PhpStorm.
- * User: Martti
+ * User: anna.karutina
  * Date: 15.03.2017
- * Time: 14:15
+ * Time: 13:08
  */
 // võtame konfiguratsiooni kasutusele
 require_once 'conf.php';
